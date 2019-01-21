@@ -1,0 +1,9 @@
+version: '3'
+services:
+  fmc2tick:
+    container_name: fmc2tick
+    image: b0066365/aci2fmc:v0.1
+    restart: always
+    volumes:
+    - .:/mnt/scripts/fmc
+    command: python /mnt/scripts/fmc/ReadFMC.py
